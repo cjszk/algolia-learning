@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import algoliasearch from 'algoliasearch';
-import { InstantSearch, SearchBox, Menu, Hits } from 'react-instantsearch-dom';
-
 
 class App extends Component {
   constructor(props) {
@@ -43,18 +41,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <InstantSearch
-          appId="MYVLLZQ39Z"
-          apiKey="6ad836bf56dd6be5564d436f4b8b3eec"
-          indexName="getstarted_actors"
-        >
-          <SearchBox/>
-          {/* <Hits/> */}
-          <Menu
-            attribute="fruits"
-            translations={{ showMore: 'Voir plus' }}
-          />
-        </InstantSearch>
         <input style={{marginTop: 50, padding: 10, fontSize: 18}} onChange={(e) => this.onInputChange(e.target.value)}/>
         <div style={{display: 'flex', flexDirection: 'column', alignContent: 'center', marginTop: 20}}>
           {this.renderResults()}
